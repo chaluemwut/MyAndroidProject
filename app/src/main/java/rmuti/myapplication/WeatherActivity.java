@@ -1,38 +1,25 @@
 package rmuti.myapplication;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
 
-public class MainActivity extends ActionBarActivity {
+public class WeatherActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button but = (Button)findViewById(R.id.button);
-        but.setOnClickListener(new View.OnClickListener(){
+        setContentView(R.layout.activity_weather);
 
-            @Override
-            public void onClick(View v) {
-                Intent weath = new Intent(v.getContext(), WeatherActivity.class);
-                startActivity(weath);
-            }
-        });
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_weather, menu);
         return true;
     }
 
